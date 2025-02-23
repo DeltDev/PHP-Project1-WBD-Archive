@@ -1,4 +1,5 @@
 # Tugas Besar Milestone I IF3110 Pengembangan Aplikasi Berbasis Web 2024/2025
+> This project is a group assignment for Web Based Development class in Institut Teknologi Bandung. Developed in 3 weeks.
 > Aplikasi LinkinPurry by Kelompok 13 K01
 
 ## Daftar Konten
