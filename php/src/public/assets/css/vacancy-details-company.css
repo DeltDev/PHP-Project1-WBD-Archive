@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    height: 100vh; /* Tinggi penuh untuk memastikan elemen berada di tengah secara vertikal */
+}
+
+header {
+    background-color: white;
+    position: relative; /* Mengubah dari sticky ke relative */
+    z-index: 1;
+    width: 100%; /* Membuatnya menyesuaikan lebar container */
+    max-width: 600px; /* Membatasi lebar maksimal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; /* Sudut melengkung */
+}
+
+.back-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+
+.linkin-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #1E7FFF;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.container {
+    position: relative;
+    max-width: 1000px; /* Membatasi lebar maksimal */
+    margin: 0 auto; /* Untuk memusatkan secara horizontal */
+    padding: 20px; /* Menambahkan ruang di sisi kanan dan kiri agar tidak mentok */
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* .tombol-container {
+    position: relative;
+
+} */
+
+.tombol-container img{
+
+    width: 50px;
+    height: auto;
+}
+
+.tombol-container .edit {
+    position: absolute;
+    top: 30%;
+    right: 20%;
+}
+
+.tombol-container .trash {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+
+.tombol-container .tutup {
+    position: absolute;
+    top: 60%;
+    right: 15%;
+}
+
+.content-wrapper {
+    margin-top: 20px; /* Jarak antara container dan card */
+    max-width: 600px; /* Sama dengan header/container */
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.card a {
+    margin-top: 15px; /* Memberi jarak di atas link "Detail" */
+}
+
+.keterangan h2 {
+    margin: 0;
+}
+
+content {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.status {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-right: 30px;
+    justify-content: space-between;
+    text-align: center;
+    width: 70px;
+}
+
+.status a {
+    text-decoration: none;
+    color: #137ceb;
+}
+
+.status p {
+    margin: 10px 0px;
+    width: 70px;
+    border-radius: 5px;
+}
+
+.status .accepted {
+    background-color: rgb(4, 117, 0);
+    color: white;
+}
+
+.status .rejected {
+    background-color: rgb(158, 0, 0);
+    color: white;
+}
+
+.status .waiting {
+    background-color: #bbbaba;
+    color: black;
+}
+
+.no-result {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.login-container {
+    width: 615px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.export-btn {
+    width: 250px;
+    height: 50px;
+    background-color: #118329; 
+    color: white;
+    font-size: 20px;
+    border: none;
+    border-radius: 40px; 
+    cursor: pointer;
+    text-decoration: none;
+    align-self: center;
+    margin-top: 20px;
+  }

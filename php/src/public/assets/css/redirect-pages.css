@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #E4E4E4;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  padding-bottom: 25px;
+  z-index: 1 ;
+}
+
+.container {
+    width: 1000px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.container h1 {
+    font-size: 40px;
+    margin-top: 60px;
+    padding: 0;
+    color: #000;
+}
+
+.linkin-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #1E7FFF;
+    color: white;
+    font-size: 24px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.back-btn{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.links a {
+  color: #1E7FFF;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.links p {
+    display: inline;
+    margin: 0;
+}
+.links-sub{
+    margin-top: 30px;
+}
+.data-container {
+  display: flex;
+  justify-content: space-between; 
+  align-items: flex-start; 
+  margin-bottom: 20px;
+  width: 750px;
+
+}
+
+.text-container {
+  max-width: 70%; 
+  margin-right: 20px;
+}
+
+.download-container{
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.data-container p {
+  margin: 5px 0;
+  text-align: left;
+}
+
+.data-container img {
+  max-width: 200px; 
+  height: auto;
+  object-fit: cover;
+  margin-left: 20px;
+  border-radius: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.apply-btn {
+  width: 350px;
+  height: 80px;
+  background-color: #0D69D2; 
+  color: white;
+  font-size: 24px;
+  border: none;
+  border-radius: 40px; 
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.apply-btn a{
+  color: white;
+  text-decoration: none;
+}
+
+.apply-btn:hover {
+  background-color: #10519c; 
+}
+
+.download-btn {
+  width: 150px;
+  height: 50px;
+  background-color: #0D69D2; 
+  color: white;
+  font-size: 20px;
+  border: none;
+  border-radius: 40px; 
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.download-btn a{
+  color: white;
+  text-decoration: none;
+}
+
+.download-btn:hover {
+  background-color: #10519c; 
+}
+
+content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 0;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Jarak antar card */
+  padding: 20px;
+  margin-top: -50px; /* Agar card terlihat di luar container */
+  position: relative; /* Posisi relative agar card tidak terpengaruh container */
+  width: 100%;
+}
+
+.card {
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  width: 500px;
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan agar terlihat seperti card */
+}
+
+.card h2 {
+  margin: 0;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card .detail {
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  color: #137ceb;
+  text-decoration: none;
+}
+
+.card .edit img {
+  position: absolute;
+  top: 20%;
+  right: 15%;
+  width: 40px;
+  height: auto;
+}
+
+.card .trash img {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 40px;
+  height: auto;
+}
+
+.keterangan {
+  margin-left: 5px;
+}
+
+.keterangan p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 15px;
+  width: 200px;
+}
+
+.image-container img {
+  max-width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}

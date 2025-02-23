@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: ${DB_INIT_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${DB_USER} -d ${DB_INIT_NAME}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  web:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: ${DB_USER}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: ${DB_NAME}
+      DB_INIT_NAME: ${DB_INIT_NAME}
+      APACHE_LOG_DIR: /var/log/apache2
+    ports:
+      - "8000:80"
+    volumes:
+      - ./php:/var/www/html
+      - ./.env:/var/www/.env
+    command: bash -c "chown -R www-data:www-data /var/www/html && apache2-foreground & wait && echo 'Server is running on http://localhost:8000'"
+volumes:
+  db_data:
